@@ -1,7 +1,15 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, SearchIcon } from "lucide-react";
+import { ArrowRight, SearchIcon, StarIcon } from "lucide-react";
+import Tabs from "./_home/tab";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   const badges = [
@@ -72,8 +80,96 @@ export default function Home() {
       </div>
       <div className="!pb-12">
         <h2 className="text-5xl font-bold text-center">
-          Connect with 5,000+ UGC creators
+          Connect with 5,000+ <br /> UGC creators
         </h2>
+        <div className="!my-12">
+          <Tabs />
+        </div>
+        <div className="!my-12 flex flex-row justify-center items-center">
+          <Button className="font-bold" size={"lg"}>
+            Explore Creators
+          </Button>
+        </div>
+        <div className="w-full flex flex-row justify-center items-center">
+          <div className="w-4/5 grid grid-cols-2 gap-6">
+            {Array.from({ length: 2 }).map((_, i) => (
+              <div className="w-full bg-secondary rounded-xl !p-12" key={i}>
+                <div className="flex flex-row justify-start items-center gap-4">
+                  <Avatar className="size-12">
+                    <AvatarImage src={"https://avatar.iran.liara.run/public"} />
+                    <AvatarFallback>UI</AvatarFallback>
+                  </Avatar>
+                  <div className="flex flex-col justify-between items-start">
+                    <p className="text-lg font-bold">Mary Jane</p>
+                  </div>
+                </div>
+                <div className="flex flex-row justify-start items-center gap-2 !py-4">
+                  <StarIcon fill="#FFD700" stroke="0" className="size-5" />
+                  <StarIcon fill="#FFD700" stroke="0" className="size-5" />
+                  <StarIcon fill="#FFD700" stroke="0" className="size-5" />
+                  <StarIcon fill="#FFD700" stroke="0" className="size-5" />
+                  <StarIcon fill="#FFD700" stroke="0" className="size-5" />
+                </div>
+                <p className="text-xl">
+                  The fit team were incredible to work with. The whole process
+                  with the platform was amazing and the pool of creators were
+                  really high quality.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="!py-12">
+          <h1 className="text-5xl font-bold text-center">FAQ</h1>
+          <div className="!pt-12 w-full">
+            <div className="w-4/5 grid grid-cols-2 !mx-auto gap-6">
+              <div className="flex flex-col justify-between gap-6">
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <Accordion
+                    key={i}
+                    type="single"
+                    className="bg-secondary rounded-2xl !px-4"
+                    collapsible
+                  >
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger className="!p-6 text-xl">
+                        How do I create a creator account?
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        Click on the “Content Creator” button in What brings you
+                        to Fitfluencex?, fill out your profile with your skills,
+                        portfolio, and rates, and start receiving client
+                        requests once approved.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                ))}
+              </div>
+              <div className="flex flex-col justify-between gap-6">
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <Accordion
+                    key={i}
+                    type="single"
+                    className="bg-secondary rounded-2xl !px-4"
+                    collapsible
+                  >
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger className="!p-6 text-xl">
+                        How do I create a creator account?
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        Click on the “Content Creator” button in What brings you
+                        to Fitfluencex?, fill out your profile with your skills,
+                        portfolio, and rates, and start receiving client
+                        requests once approved.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

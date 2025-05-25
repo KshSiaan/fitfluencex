@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Combobox } from "../ui/combobox";
 
 const navlinks = [
-  { title: "Content Creators", to: "/" },
+  { title: "Content Creators", to: "/creators" },
   { title: "Brands", to: "/" },
   { title: "Pricing", to: "/" },
   { title: "How it works", to: "/" },

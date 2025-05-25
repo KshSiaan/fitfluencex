@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { siFacebook, siInstagram, siTiktok } from "simple-icons";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -13,19 +15,60 @@ export default function Footer() {
             <Button
               size="icon"
               className="rounded-full bg-black hover:bg-black/80"
-            ></Button>
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 text-white"
+              >
+                <title>Tiktok</title>
+                <path d={siTiktok.path} />
+              </svg>
+            </Button>
             <Button
               size="icon"
               className="rounded-full bg-black hover:bg-black/80"
-            ></Button>
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 text-white"
+              >
+                <title>Instagram</title>
+                <path d={siInstagram.path} />
+              </svg>
+            </Button>
             <Button
               size="icon"
               className="rounded-full bg-black hover:bg-black/80"
-            ></Button>
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 text-white"
+              >
+                <title>Facebook</title>
+                <path d={siFacebook.path} />
+              </svg>
+            </Button>
             <Button
               size="icon"
               className="rounded-full bg-black hover:bg-black/80"
-            ></Button>
+            >
+              <Image
+                src={"/svg/LinkedIn.svg"}
+                height={64}
+                width={64}
+                alt="LinkedIn"
+                className="size-4"
+              />
+            </Button>
           </div>
         </div>
         <div className="">

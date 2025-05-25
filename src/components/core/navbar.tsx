@@ -46,8 +46,8 @@ export default function Navbar() {
             <AvatarFallback>UI</AvatarFallback>
           </Avatar>
         ) : (
-          <Button size="lg" variant="ghost">
-            Sign in
+          <Button size="lg" variant="ghost" asChild>
+            <Link href={"/login"}>Sign in</Link>
           </Button>
         )}
         <Button size="lg">Order</Button>

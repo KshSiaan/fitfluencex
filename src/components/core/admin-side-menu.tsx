@@ -4,6 +4,7 @@ import {
   ChatsIcon,
   CustomOrdersIcon,
   DashboardIcon,
+  NewsletterIcon,
   OrdersIcon,
   ServicesIcon,
   SettingIcon,
@@ -13,7 +14,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils"; // Assuming you use a cn util
 
-export default function SideMenu() {
+export default function AdminSideMenu() {
   const router = useRouter();
   const pathname = usePathname();
   const [current, setCurrent] = useState("dashboard");
@@ -30,7 +31,7 @@ export default function SideMenu() {
       return;
     }
     setCurrent(key);
-    router.push(`/creator/${key}`);
+    router.push(`/admin/${key}`);
   };
 
   const items = [
@@ -40,24 +41,29 @@ export default function SideMenu() {
       icon: <DashboardIcon className="size-6" />,
     },
     {
-      label: "Services",
-      key: "services",
+      label: "Brands",
+      key: "brands",
       icon: <ServicesIcon className="size-6" />,
     },
     {
-      label: "Categories",
-      key: "categories",
+      label: "Creators",
+      key: "creators",
+      icon: <CustomOrdersIcon className="size-6" />,
+    },
+    {
+      label: "Transactions",
+      key: "transactions",
       icon: <CategoriesIcon className="size-6" />,
     },
     {
-      label: "Order History",
-      key: "orders",
+      label: "Listing Reporting",
+      key: "listing",
       icon: <OrdersIcon className="size-6" />,
     },
     {
-      label: "Pending Orders",
-      key: "pending",
-      icon: <CustomOrdersIcon className="size-6" />,
+      label: "Content management",
+      key: "content",
+      icon: <NewsletterIcon className="size-6" />,
     },
     { label: "Chat", key: "chat", icon: <ChatsIcon className="size-6" /> },
     {

@@ -19,7 +19,7 @@ export default function RootLayout({
       <main className="grid grid-cols-11">
         <div className="col-span-2 ">
           <div className="h-dvh w-full sticky top-0 left-0">
-            <Sidebar by="creator" />
+            <Sidebar by="admin" />
           </div>
         </div>
         <div className="col-span-9 flex flex-col justify-start items-start">

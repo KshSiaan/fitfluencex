@@ -20,7 +20,10 @@ export default function Home() {
   ];
   return (
     <>
-      <div className="h-[calc(100dvh-64px)] bg-zinc-200 grid grid-cols-2">
+      <div
+        className="h-[calc(100dvh-64px)] bg-zinc-200 grid grid-cols-2 bg-center bg-no-repeat bg-size-[70dvh]"
+        style={{ backgroundImage: "url('/image/header-bg.svg')" }}
+      >
         <div className="!p-12">
           <h1 className="text-6xl font-bold">
             Where Creators <br /> and Brands Unite <br /> in Style.

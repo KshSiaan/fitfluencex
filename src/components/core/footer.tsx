@@ -74,17 +74,17 @@ export default function Footer() {
         <div className="">
           <h3 className="font-bold">Quick Links</h3>
           <div className="flex flex-col justify-start items-start gap-2 !pt-4 font-semibold text-black/70">
-            <Link href={"/"}>Log in</Link>
-            <Link href={"/"}>Register</Link>
+            <Link href={"/login"}>Log in</Link>
+            <Link href={"/register"}>Register</Link>
           </div>
         </div>
         <div className="">
           <h3 className="font-bold">Company</h3>
           <div className="flex flex-col justify-start items-start gap-2 !pt-4 font-semibold text-black/70">
-            <Link href={"/"}>About Us</Link>
-            <Link href={"/"}>FAQs</Link>
-            <Link href={"/"}>How it works</Link>
-            <Link href={"/"}>Terms and conditions</Link>
+            <Link href={"/about"}>About Us</Link>
+            <Link href={"/faq"}>FAQs</Link>
+            <Link href={"/how-it-works"}>How it works</Link>
+            <Link href={"/tnc"}>Terms and conditions</Link>
           </div>
         </div>
         <div className="">

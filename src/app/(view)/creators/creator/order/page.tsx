@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { CheckIcon, StarIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
   return (
@@ -63,6 +64,9 @@ export default function Page() {
                 </CardHeader>
               </Card>
             ))}
+          </div>
+          <div className="w-full flex items-center justify-center !mt-12">
+            <Button>Show more</Button>
           </div>
         </div>
       </div>

@@ -6,9 +6,8 @@ import { Combobox } from "../ui/combobox";
 
 const navlinks = [
   { title: "Content Creators", to: "/creators" },
-  { title: "Brands", to: "/" },
-  { title: "Pricing", to: "/" },
-  { title: "How it works", to: "/" },
+  { title: "Brands", to: "/brands" },
+  { title: "How it works", to: "/how-it-works" },
 ];
 
 const langs = [

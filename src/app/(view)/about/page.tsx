@@ -11,10 +11,14 @@ import React from "react";
 export default function Page() {
   return (
     <main className="!py-12 !px-4 md:!px-12 !space-y-6">
-      <h1 className="!mb-12 text-center text-6xl font-bold">About Us</h1>
+      <h1 className="!mb-12 text-center text-4xl sm:text-5xl md:text-6xl font-bold">
+        About Us
+      </h1>
       <div className="">
-        <h3 className="!mb-6 text-3xl font-bold">Welcome to Fitness</h3>
-        <p className="font-medium">
+        <h3 className="!mb-6 text-2xl sm:text-3xl font-bold">
+          Welcome to Fitness
+        </h3>
+        <p className="font-medium text-base sm:text-lg">
           We&apos;re a platform built for creators and their biggest supporters.
           Whether you&apos;re an artist, musician, writer, gamer, or any type of
           content creator — we help you build meaningful connections with your
@@ -27,17 +31,18 @@ export default function Page() {
           together, one follower at a time. 💙
         </p>
       </div>
-      <div className="!my-12 grid grid-cols-2 gap-6">
+      <div className="!my-12 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="!space-y-6">
           {Array.from({ length: 3 }).map((_, i) => (
             <Card key={i}>
               <CardHeader>
-                <CardAction className="col-start-1 !justify-self-start">
-                  <Button>Our Vision</Button>
+                {/* Adjusted CardAction to ensure proper alignment on smaller screens */}
+                <CardAction className="col-start-1 !justify-self-start w-full">
+                  <Button className="w-full sm:w-auto">Our Vision</Button>
                 </CardAction>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-foreground">
+                <CardDescription className="text-foreground text-sm sm:text-base">
                   Lorem ipsum dolor sit amet consectetur. Molestie nibh nibh
                   porttitor pulvinar nisl vestibulum. Ultricies augue semper eu
                   pulvinar adipiscing et. Pharetra ultrices elit orci amet. Duis
@@ -54,8 +59,9 @@ export default function Page() {
             </Card>
           ))}
         </div>
+        {/* Adjusted image height for responsiveness */}
         <div
-          className="h-full bg-purple-50 rounded-lg bg-cover bg-center bg-no-repeat"
+          className="h-64 md:h-auto bg-purple-50 rounded-lg bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/image/hearder-card-1.jpg')" }}
         ></div>
       </div>

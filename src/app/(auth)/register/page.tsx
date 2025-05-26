@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="h-[calc(100dvh-64px)] flex flex-col justify-center items-center !space-y-12">
-      <h1 className="text-4xl font-bold text-center">
+    <div className="lg:h-[calc(100dvh-64px)] !py-12 lg:!py-0 flex flex-col justify-center items-center !space-y-12">
+      <h1 className="!px-4 text-2xl lg:text-4xl font-bold text-center">
         What brings you to Fitfluencex?
       </h1>
-      <div className="w-4/5 grid grid-cols-2 gap-6">
+      <div className="w-4/5 grid lg:grid-cols-2 gap-6">
         <Link
           href="/register/brand"
           className="hover:scale-105 transition-transform"

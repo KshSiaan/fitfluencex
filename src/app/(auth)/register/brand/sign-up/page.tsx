@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import React, { useEffect } from "react";
 import RegisterForm from "./register-form";
 import { useRouter, useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 export default function Page() {
   const plan = useSearchParams().get("plan");
@@ -23,8 +24,14 @@ export default function Page() {
           <div className="">
             <RegisterForm />
           </div>
-          <div className="w-full h-full">
-            {/* <Image src="" height={} width={} /> */}
+          <div className="w-full h-full flex justify-center items-center">
+            <Image
+              src="/image/auther.png"
+              height={500}
+              width={500}
+              alt="thumbnail"
+              className="h-[40dvh] object-contain !mx-auto"
+            />
           </div>
         </CardContent>
       </Card>

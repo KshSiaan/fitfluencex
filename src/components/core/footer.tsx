@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="!py-12 bg-secondary !px-4 md:!px-12">
       <h2 className="text-3xl font-bold">Fitfluencex</h2>
-      <div className="w-full grid grid-cols-4 gap-12 !pt-8">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 !pt-8">
         <div className="">
           <h3 className="font-bold">Social Media</h3>
           <div className="!pt-4 flex flex-row justify-start items-center gap-2">

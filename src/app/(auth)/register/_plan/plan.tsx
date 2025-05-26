@@ -16,7 +16,7 @@ export default function Plan({ type }: { type: string }) {
   }
   return (
     <div className="h-[calc(100dvh-64px)] flex flex-col justify-center items-center !space-y-12">
-      <div className="w-4/5 grid grid-cols-2 gap-6">
+      <div className="w-4/5 grid lg:grid-cols-2 gap-6">
         <Card className="flex flex-col justify-center items-center gap-6 !py-[100px]">
           <CardContent className="text-center w-full !space-y-6">
             <h2 className="text-3xl">Free</h2>

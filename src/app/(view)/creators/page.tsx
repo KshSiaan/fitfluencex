@@ -24,15 +24,18 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="!py-12 px-4 md:!px-12">
-      <h1 className="text-center text-6xl font-bold">
+    <div className="!py-12 !px-4 md:!px-12">
+      <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold">
         Find Your Creator <br /> Seemlessly
       </h1>
-      <div className="!pt-[100px] grid grid-cols-5">
-        <div className="w-full !pr-4">
-          <div className="!pt-6 sticky top-0">
-            <h2 className="text-4xl font-bold !pb-6">Filter</h2>
-            <Accordion type="single" collapsible>
+      <div className="!pt-[50px] md:!pt-[100px] grid grid-cols-1 md:grid-cols-5 gap-6">
+        {/* Filter Section */}
+        <div className="w-full md:!pr-4 col-span-1 md:col-span-1">
+          <div className="!pt-6 md:sticky md:top-0">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold !pb-6">
+              Filter
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Category</AccordionTrigger>
                 <AccordionContent className="flex flex-col justify-start items-start gap-2">
@@ -57,7 +60,7 @@ export default function Page() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-2">
                 <AccordionTrigger>Gender</AccordionTrigger>
                 <AccordionContent className="flex flex-col justify-start items-start gap-2">
@@ -82,7 +85,7 @@ export default function Page() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-3">
                 <AccordionTrigger>Video Length</AccordionTrigger>
                 <AccordionContent className="flex flex-col justify-start items-start gap-2">
@@ -113,7 +116,7 @@ export default function Page() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Location</AccordionTrigger>
                 <AccordionContent className="flex flex-col justify-start items-start gap-2">
@@ -146,7 +149,9 @@ export default function Page() {
             </Accordion>
           </div>
         </div>
-        <div className="col-span-4 grid grid-cols-4 gap-6 ">
+
+        {/* Creator Cards Section */}
+        <div className="col-span-1 md:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
           {Array.from({ length: 16 }).map((_, i) => (
             <Link href={"/creators/creator"} key={i}>
               <Card className="w-full aspect-[9/12] !p-2 hover:scale-95 hover:shadow-lg transition-all">
@@ -179,7 +184,9 @@ export default function Page() {
             </Link>
           ))}
         </div>
-        <div className="!py-12 flex flex-row justify-end items-center w-full col-span-5">
+
+        {/* Pagination Section */}
+        <div className="!py-12 flex flex-row  justify-center lg:justify-end items-center w-full col-span-full">
           <Pagination className="w-min">
             <PaginationContent>
               <PaginationItem>

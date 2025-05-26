@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import React from "react";
 import ForgotForm from "./forgot-form";
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -10,12 +11,18 @@ export default function Page() {
         Enter valid information to update a new password
       </p>
       <Card>
-        <CardContent className="grid grid-cols-2 gap-6 !py-12">
-          <div className="">
+        <CardContent className="grid lg:grid-cols-2 gap-6 !py-12">
+          <div className="order-2 lg:order-1 h-full flex justify-center items-center">
             <ForgotForm />
           </div>
-          <div className="w-full h-full">
-            {/* <Image src="" height={} width={} /> */}
+          <div className="order-1 lg:order-2 w-full h-full">
+            <Image
+              src="/image/auther.png"
+              height={500}
+              width={500}
+              alt="thumbnail"
+              className="h-[40dvh] object-contain !mx-auto"
+            />
           </div>
         </CardContent>
       </Card>

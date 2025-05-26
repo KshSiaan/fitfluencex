@@ -33,7 +33,7 @@ export default function ForgotForm() {
     navig.push("/verify-otp");
   }
   return (
-    <div>
+    <div className="w-full">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="!space-y-8">
           <FormField

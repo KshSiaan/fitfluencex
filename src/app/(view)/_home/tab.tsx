@@ -28,9 +28,10 @@ export default function Tabs() {
 
   return (
     <div className="relative w-full flex flex-col items-center !py-12">
+      {/* Tab container */}
       <div
         role="tablist"
-        className="relative flex justify-center items-center gap-8 !px-10 !py-2 rounded-full"
+        className="relative flex justify-center items-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 !px-4 sm:!px-6 md:!px-10 !py-2 rounded-full"
       >
         {/* Background animation pill */}
         <motion.div
@@ -50,15 +51,16 @@ export default function Tabs() {
             }}
             onClick={() => setActive(i)}
             className={cn(
-              "relative z-10 cursor-pointer text-2xl font-bold text-black !px-10 !py-2 rounded-full transition-colors duration-300"
+              "relative z-10 cursor-pointer text-sm sm:text-base md:text-xl lg:text-2xl font-bold text-black !px-4 sm:!px-6 md:!px-8 lg:!px-10 !py-1 sm:!py-2 rounded-full transition-colors duration-300"
             )}
           >
             {tab.label}
           </button>
         ))}
       </div>
+
       <div className="!mt-24 w-full">
-        <div className="w-3/4 grid grid-cols-4 gap-6 !mx-auto">
+        <div className="w-[90%] md:w-3/4 grid  lg:grid-cols-4 gap-6 !mx-auto">
           {Array.from({ length: 4 }).map((_, i) => (
             <Card className="!w-full bg-secondary !p-4" key={i}>
               <CardHeader
